@@ -3,9 +3,11 @@
         "target": "esnext",
         "experimentalDecorators": true,
         "outDir": "./dist",
-        "module": "commonjs"
+        "module": "commonjs",
+        "declaration": true
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "dist"
     ]
 }

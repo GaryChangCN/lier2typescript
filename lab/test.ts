@@ -2,22 +2,12 @@
 
 import convert from '../src'
 
-
-// const lierStr = `
-// # ddd
-// {
-//     code: int
-//     # dddd
-//     data: AppKitBannerForCollect
-//     msg: str
-//     success: bool
-// }
-// `
-
 const lierStr = `
 {
-    @range(1,3)
     a: int
+    b: {
+        a: str[]
+    }
 }
 `
 
