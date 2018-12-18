@@ -65,8 +65,6 @@ class Table {
             return node as any
         }
 
-        console.log('router =====> ', node.type)
-
         const handle = this[node.type]
         if (!handle) {
             return node as any
