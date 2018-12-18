@@ -4,8 +4,13 @@ Compile lier to typescript typings
 
 ## USAGE
 
+```bash
+npm i lier2ts
+```
+
 ```javascript
-import lier2ts from 'lier2typescript'
+import lier2ts from 'lier2ts'
+// or const lier2ts = require('lier2ts').default
 
 
 const lierStr = `
