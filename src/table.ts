@@ -1,5 +1,6 @@
 import * as Grammer from 'lier/src/grammar/interface'
 import mapping from './mapping'
+import * as _ from 'lodash'
 
 
 
@@ -41,7 +42,7 @@ class Table {
     ctx: Context
 
     constructor (option = defaultOptions) {
-        this.option = Object.assign({}, defaultOptions, option)
+        this.option = _.assign({}, defaultOptions, option)
         this.ctx = new Context()
     }
 
@@ -52,7 +53,7 @@ class Table {
         }
         const intent = this.option.intentType === 'space' ? ' ' : '\t'
         const repeat = this.option.intentSize * depth
-        return intent.repeat(repeat)
+        return _.repeat(intent, repeat)
     }
 
     /** 首字母大写 */

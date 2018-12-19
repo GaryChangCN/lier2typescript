@@ -1,3 +1,3 @@
-import * as index from './src'
+import src from './src'
 
-export = index
+export const convert = src

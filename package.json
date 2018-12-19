@@ -1,31 +1,36 @@
 {
   "name": "lier2ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert lier to typescript typings",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lab": "onchange -i -k './src/**/*.ts' './lab/**/*.ts' -- ts-node lab/test.ts",
-    "build": "tsc"
+    "build": "rm -rf ./dist && npx tsc"
   },
   "keywords": [
     "lier",
     "typescript"
   ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/GaryChangCN/lier2typescript"
+    "type": "git",
+    "url": "https://github.com/GaryChangCN/lier2typescript"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "garychangcn",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^10.12.17",
     "onchange": "^5.2.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "lier": "^2.1.19"
+    "lier": "^2.1.20",
+    "lodash": "^4.17.11"
   }
 }

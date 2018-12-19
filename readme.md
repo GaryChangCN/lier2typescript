@@ -9,8 +9,8 @@ npm i lier2ts
 ```
 
 ```javascript
-import lier2ts from 'lier2ts'
-// or const lier2ts = require('lier2ts').default
+import * as lier2ts from 'lier2ts'
+// or const lier2ts = require('lier2ts')
 
 
 const lierStr = `
@@ -22,7 +22,7 @@ const lierStr = `
 }
 `
 
-const result = lier2ts(lierStr, {})
+const result = lier2ts.convert(lierStr, {})
 
 ```
 
