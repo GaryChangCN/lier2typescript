@@ -251,9 +251,8 @@ class Table {
         return ''
     }
 
-    [Grammer.Type.array] = (node: Grammer.ArrayNode) => {
-
-        const value = this.router(node.value)
+    [Grammer.Type.array] = (node: Grammer.ArrayNode, deploy?: RouterDeploy) => {
+        const value = this.router(node.value, deploy)
         if (node.value.type === Grammer.Type.unary || node.value.type === Grammer.Type.binary) {
             return `(${value})[]`
         }
