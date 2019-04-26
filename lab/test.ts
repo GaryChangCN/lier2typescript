@@ -4,12 +4,12 @@ import convert from '../src'
 
 const lierStr = `
 {
-    c: {
-        w: str
-        f: {
-            e: int
-        }[]
-    }[]
+    $rest: {
+        b: int
+        $rest: {
+            a: str
+        }
+    }
 }
 `
 

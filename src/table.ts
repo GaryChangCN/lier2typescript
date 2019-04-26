@@ -141,7 +141,6 @@ class Table {
 
 
     [Grammer.Type.object] = (node: Grammer.ObjectNode, deploy?: RouterDeploy) => {
-
         const innerDeploy: RouterDeploy = {
             depth: 1
         }
@@ -163,7 +162,13 @@ class Table {
                         continue
                     }
                     // $rest: int 之类
-                    const v = this.router((innerNode.value as any).value)
+                    const inner2Deploy: RouterDeploy = {
+                        depth: 0
+                    }
+                    if (innerDeploy && innerDeploy.depth) {
+                        inner2Deploy.depth += innerDeploy.depth
+                    }
+                    const v = this.router((innerNode.value as any), inner2Deploy)
                     const kv1 = `[key: string]: ${v}`
                     lines.push(prefix + kv1)
                     continue
