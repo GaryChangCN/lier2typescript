@@ -149,9 +149,14 @@ class Table {
         }
 
         const lines: string[] = []
+        const prefix = this.getPrefix(innerDeploy.depth)
+
+        // 处理是空对象情况，空对象转成 any
+        if (node.properties.length === 0) {
+            return 'any'
+        }
 
         for (const property of node.properties) {
-            const prefix = this.getPrefix(innerDeploy.depth)
 
             // 处理 $rest 情况
             if (property.type === Grammer.Type.property) {

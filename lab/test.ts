@@ -4,11 +4,11 @@ import convert from '../src'
 
 const lierStr = `
 {
-    $rest: {
-        b: int
-        $rest: {
-            a: str
-        }
+    a: {}
+    b: {
+        a: int
+        f: {}
+        g: any
     }
 }
 `

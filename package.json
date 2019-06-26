@@ -1,6 +1,6 @@
 {
   "name": "lier2ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "convert lier to typescript typings",
   "main": "dist/index.js",
   "scripts": {
