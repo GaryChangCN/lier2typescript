@@ -24,13 +24,13 @@
   "devDependencies": {
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.17",
-    "onchange": "^5.2.0",
+    "onchange": "^7.1.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "lier": "^2.1.20",
-    "lodash": "^4.17.11"
+    "lier": "^2.1.23",
+    "lodash": "^4.18.1"
   }
 }
